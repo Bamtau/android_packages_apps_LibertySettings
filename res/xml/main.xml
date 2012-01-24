@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="General Settings"
+		android:key="general">
+		<PreferenceScreen android:key="customization"
+			android:title="@string/pt_customization" android:summary="@string/ps_customization">
+			<intent android:action="android.intent.action.MAIN"
+				android:targetPackage="com.liberty.settings" android:targetClass="com.liberty.settings.Customizer" />
+		</PreferenceScreen>
+		<PreferenceScreen android:key="performance"
+			android:title="@string/pt_performance" android:summary="@string/ps_performance">
+			<intent android:action="android.intent.action.MAIN"
+				android:targetPackage="com.liberty.settings" android:targetClass="com.liberty.settings.Performance" />
+		</PreferenceScreen>
+		<PreferenceScreen android:key="tools" android:title="@string/pt_tools"
+			android:summary="@string/ps_tools">
+			<intent android:action="android.intent.action.MAIN"
+				android:targetPackage="com.liberty.settings" android:targetClass="com.liberty.settings.Tools" />
+		</PreferenceScreen>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Build Information"
+		android:key="general">
+		<PreferenceScreen android:key="mod_version"
+			style="?android:preferenceInformationStyle" android:title="@string/pt_mod_version">
+		</PreferenceScreen>
+		<PreferenceScreen android:key="changelog"
+			android:title="Changelog" android:summary="Display the changelog">
+		</PreferenceScreen>
+	</PreferenceCategory>
+</PreferenceScreen>
